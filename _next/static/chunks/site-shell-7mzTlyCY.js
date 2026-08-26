@@ -1,5 +1,5 @@
 const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["_next/static/chunks/main-NVNiBfcR.js","_next/static/css/main.BFWbLJ9O.css"])))=>i.map(i=>d[i]);
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{i as t,r as n}from"./framework-CSI8Plig.js";import{t as r}from"./index-BDB42B0H.js";var i=e(n(),1),a=`<!doctype html>
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{i as t,r as n}from"./framework-CSI8Plig.js";import{t as r}from"./index-CGLGoKhI.js";var i=e(n(),1),a=`<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -92,10 +92,10 @@ import{r as e}from"./rolldown-runtime-hePW80VL.js";import{i as t,r as n}from"./f
             </a>
             <a
               class="resource-link profile-resource"
-              href="https://github.com/NIRIXIANG"
+              href="https://scholar.google.com/citations?user=bEonUaYAAAAJ&amp;hl=zh-CN"
               target="_blank"
               rel="noreferrer"
-              aria-label="Visit Rixiang Ni's GitHub profile"
+              aria-label="Visit Rixiang Ni's Google Scholar profile"
             >
               <svg class="resource-icon profile-icon" viewBox="0 0 72 72" aria-hidden="true">
                 <circle cx="36" cy="25" r="12" fill="none" stroke="currentColor" stroke-width="5" />
