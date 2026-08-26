@@ -1,5 +1,5 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["_next/static/chunks/main-NVNiBfcR.js","_next/static/css/main.BFWbLJ9O.css"])))=>i.map(i=>d[i]);
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{i as t,r as n}from"./framework-CSI8Plig.js";import{t as r}from"./index-CGLGoKhI.js";var i=e(n(),1),a=`<!doctype html>
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["_next/static/chunks/main-CHjlf-sA.js","_next/static/css/main.CBHCwjVl.css"])))=>i.map(i=>d[i]);
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{i as t,r as n}from"./framework-CSI8Plig.js";import{t as r}from"./index-Cn9yuUsE.js";var i=e(n(),1),a=`<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -33,7 +33,18 @@ import{r as e}from"./rolldown-runtime-hePW80VL.js";import{i as t,r as n}from"./f
     <main id="main" class="project-section">
       <div class="project-container">
         <section class="project-hero" data-qa="hero">
-          <div class="title-row">
+          <div class="hero-brandbar">
+            <img
+              class="hero-venue-logo"
+              src="/assets/branding/eccv-color-logo-2026.svg"
+              alt="ECCV 2026, Malmö, September 8–12"
+              width="424"
+              height="201"
+            />
+            <span class="hero-brandbar-rule" aria-hidden="true"></span>
+          </div>
+
+          <div class="title-row hero-title-row">
             <p class="project-kicker">SPIRE</p>
             <h1 class="project-title">
               Rethinking IRSTD: Single-Point Supervision Guided Encoder-Only Framework Is Enough for Infrared
@@ -56,10 +67,6 @@ import{r as e}from"./rolldown-runtime-hePW80VL.js";import{i as t,r as n}from"./f
           <div class="affiliation">
             <h3 class="institution">College of Electronic Science and Technology</h3>
             <p class="team-note">National University of Defense Technology · Wei An Research Group</p>
-          </div>
-
-          <div class="title-row">
-            <h2 class="project-subheader venue">ECCV 2026</h2>
           </div>
 
           <div class="resource-icons base-row" aria-label="Paper resources">
@@ -445,4 +452,4 @@ import{r as e}from"./rolldown-runtime-hePW80VL.js";import{i as t,r as n}from"./f
     <script type="module" src="/src/main.ts"><\/script>
   </body>
 </html>
-`,o=t(),s=a.replace(/^[\s\S]*?<body[^>]*>/i,``).replace(/<\/body>[\s\S]*$/i,``).replace(/<script\s+type=["']module["']\s+src=["']\/src\/main\.ts["']\s*><\/script>/i,``);function c(){return(0,i.useEffect)(()=>{r(()=>import(`./main-NVNiBfcR.js`),__vite__mapDeps([0,1]))},[]),(0,o.jsx)(`div`,{className:`site-root`,dangerouslySetInnerHTML:{__html:s}})}export{c as default};
+`,o=t(),s=a.replace(/^[\s\S]*?<body[^>]*>/i,``).replace(/<\/body>[\s\S]*$/i,``).replace(/<script\s+type=["']module["']\s+src=["']\/src\/main\.ts["']\s*><\/script>/i,``);function c(){return(0,i.useEffect)(()=>{r(()=>import(`./main-CHjlf-sA.js`),__vite__mapDeps([0,1]))},[]),(0,o.jsx)(`div`,{className:`site-root`,dangerouslySetInnerHTML:{__html:s}})}export{c as default};
