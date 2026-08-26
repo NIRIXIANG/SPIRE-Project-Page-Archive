@@ -1,5 +1,5 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["_next/static/chunks/main-BXlseq0I.js","_next/static/css/main.jUrqywZF.css"])))=>i.map(i=>d[i]);
-import{r as e}from"./rolldown-runtime-hePW80VL.js";import{i as t,r as n}from"./framework-CSI8Plig.js";import{t as r}from"./index-DQervGdO.js";var i=e(n(),1),a=`<!doctype html>
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["_next/static/chunks/main-DCjq5d1V.js","_next/static/css/main.DfOpPTeo.css"])))=>i.map(i=>d[i]);
+import{r as e}from"./rolldown-runtime-hePW80VL.js";import{i as t,r as n}from"./framework-CSI8Plig.js";import{t as r}from"./index-C2meIcB8.js";var i=e(n(),1),a=`<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -42,7 +42,7 @@ import{r as e}from"./rolldown-runtime-hePW80VL.js";import{i as t,r as n}from"./f
               height="201"
             />
             <div class="hero-conference-lockup">
-              <p class="hero-conference-name">The 19th European Conference on Computer Vision</p>
+              <p class="hero-conference-name">Accepted to ECCV 2026</p>
               <span class="hero-brandbar-rule" aria-hidden="true"></span>
             </div>
           </div>
@@ -455,4 +455,4 @@ import{r as e}from"./rolldown-runtime-hePW80VL.js";import{i as t,r as n}from"./f
     <script type="module" src="/src/main.ts"><\/script>
   </body>
 </html>
-`,o=t(),s=a.replace(/^[\s\S]*?<body[^>]*>/i,``).replace(/<\/body>[\s\S]*$/i,``).replace(/<script\s+type=["']module["']\s+src=["']\/src\/main\.ts["']\s*><\/script>/i,``);function c(){return(0,i.useEffect)(()=>{r(()=>import(`./main-BXlseq0I.js`),__vite__mapDeps([0,1]))},[]),(0,o.jsx)(`div`,{className:`site-root`,dangerouslySetInnerHTML:{__html:s}})}export{c as default};
+`,o=t(),s=a.replace(/^[\s\S]*?<body[^>]*>/i,``).replace(/<\/body>[\s\S]*$/i,``).replace(/<script\s+type=["']module["']\s+src=["']\/src\/main\.ts["']\s*><\/script>/i,``);function c(){return(0,i.useEffect)(()=>{r(()=>import(`./main-DCjq5d1V.js`),__vite__mapDeps([0,1]))},[]),(0,o.jsx)(`div`,{className:`site-root`,dangerouslySetInnerHTML:{__html:s}})}export{c as default};
