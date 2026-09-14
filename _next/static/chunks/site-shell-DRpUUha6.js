@@ -427,15 +427,19 @@ import{r as e}from"./rolldown-runtime-hePW80VL.js";import{i as t,r as n}from"./f
             and
             <a href="https://github.com/NIRIXIANG/SPIRE-IRSTD" target="_blank" rel="noreferrer">Code</a>.
           </p>
-          <pre><code data-bibtex>@inproceedings{ni2026spire,
-  title={Rethinking IRSTD: Single-Point Supervision Guided
-         Encoder-Only Framework Is Enough for Infrared
-         Small Target Detection},
-  author={Ni, Rixiang and Chen, Jun and Li, Boyang and
-          Li, Yonghao and He, Wujiao and Wang, Yuji and
-          Ren, Feiyu and Yuan, Haoyang and An, Wei},
-  booktitle={European Conference on Computer Vision},
-  year={2026}
+          <pre><code data-bibtex>@inproceedings{ni2026rethinking,
+  title     = {Rethinking IRSTD: Single-Point Supervision Guided Encoder-Only Framework is Enough for Infrared Small Target Detection},
+  author    = {Ni, Rixiang and Chen, Jun and Li, Boyang and Li, Yonghao and He, Wujiao and Wang, Yuji and Ren, Feiyu and Yuan, Haoyang and An, Wei},
+  booktitle = {Computer Vision -- ECCV 2026},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {17069},
+  pages     = {643--660},
+  publisher = {Springer},
+  address   = {Cham},
+  year      = {2026},
+  doi       = {10.1007/978-3-032-37023-5_35},
+  url       = {https://doi.org/10.1007/978-3-032-37023-5_35}
+
 }</code></pre>
         </section>
 
