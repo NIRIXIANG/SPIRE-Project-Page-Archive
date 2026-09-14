@@ -1,9 +1,9 @@
 name: Update ECCV publication info
 
-on:
+'on':
   push:
     paths:
-      - '.github/workflows/update-eccv-publication.yml'
+      - .github/workflows/update-eccv-publication.yml
 
 permissions:
   contents: write
@@ -13,53 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Update official paper link and citation
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re
-
-          p = Path('index.html')
-          text = p.read_text(encoding='utf-8')
-
-          official = 'https://link.springer.com/chapter/10.1007/978-3-032-37023-5_35'
-          text = text.replace('https://arxiv.org/abs/2604.05363', official)
-
-          new_bib = '''@inproceedings{ni2026rethinking,
-  title={Rethinking IRSTD: Single-Point Supervision Guided Encoder-Only Framework Is Enough for Infrared Small Target Detection},
-  author={Ni, Rixiang and Chen, Jun and Li, Boyang and Li, Yonghao and He, Wujiao and Wang, Yuji and Ren, Feiyu and Yuan, Haoyang and An, Wei},
-  booktitle={Computer Vision -- ECCV 2026},
-  series={Lecture Notes in Computer Science},
-  volume={17069},
-  pages={643--660},
-  publisher={Springer},
-  address={Cham},
-  year={2026},
-  doi={10.1007/978-3-032-37023-5_35},
-  url={https://doi.org/10.1007/978-3-032-37023-5_35}
-}'''
-
-          pattern = r'(<pre><code data-bibtex>).*?(</code></pre>)'
-          text, n = re.subn(pattern, lambda m: m.group(1) + new_bib + m.group(2), text, count=1, flags=re.S)
-          if n != 1:
-              raise SystemExit('Citation block not found')
-
-          # Keep the final DOM correct even if the exported client bundle hydrates older static data.
-          marker = '<script id="eccv-official-publication-patch">'
-          if marker not in text:
-              patch = '''\n<script id="eccv-official-publication-patch">\n(() => {\n  const bib = `''' + new_bib.replace('`', '\\`') + '''`;\n  const apply = () => {\n    document.querySelectorAll('a[href="https://arxiv.org/abs/2604.05363"]').forEach(a => { a.href = "''' + official + '''"; });\n    const code = document.querySelector('[data-bibtex]');\n    if (code) code.textContent = bib;\n  };\n  apply();\n  setTimeout(apply, 250);\n  setTimeout(apply, 1000);\n})();\n</script>\n'''
-              text = text.replace('</body>', patch + '</body>')
-
-          p.write_text(text, encoding='utf-8')
-          PY
-      - name: Commit publication update
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          if git diff --cached --quiet; then
-            echo "No changes needed"
-          else
-            git commit -m "Use official ECCV Springer paper link and citation"
-            git push
-          fi
+      - name: Update publication info
+        run: echo 'CmZyb20gcGF0aGxpYiBpbXBvcnQgUGF0aAppbXBvcnQgcmUKcD1QYXRoKCJpbmRleC5odG1sIikKcz1wLnJlYWRfdGV4dChlbmNvZGluZz0idXRmLTgiKQpvZmZpY2lhbD0iaHR0cHM6Ly9saW5rLnNwcmluZ2VyLmNvbS9jaGFwdGVyLzEwLjEwMDcvOTc4LTMtMDMyLTM3MDIzLTVfMzUiCnM9cy5yZXBsYWNlKCJodHRwczovL2FyeGl2Lm9yZy9hYnMvMjYwNC4wNTM2MyIsIG9mZmljaWFsKQpiaWI9IiIiQGlucHJvY2VlZGluZ3N7bmkyMDI2cmV0aGlua2luZywKICB0aXRsZT17UmV0aGlua2luZyBJUlNURDogU2luZ2xlLVBvaW50IFN1cGVydmlzaW9uIEd1aWRlZCBFbmNvZGVyLU9ubHkgRnJhbWV3b3JrIElzIEVub3VnaCBmb3IgSW5mcmFyZWQgU21hbGwgVGFyZ2V0IERldGVjdGlvbn0sCiAgYXV0aG9yPXtOaSwgUml4aWFuZyBhbmQgQ2hlbiwgSnVuIGFuZCBMaSwgQm95YW5nIGFuZCBMaSwgWW9uZ2hhbyBhbmQgSGUsIFd1amlhbyBhbmQgV2FuZywgWXVqaSBhbmQgUmVuLCBGZWl5dSBhbmQgWXVhbiwgSGFveWFuZyBhbmQgQW4sIFdlaX0sCiAgYm9va3RpdGxlPXtDb21wdXRlciBWaXNpb24gLS0gRUNDViAyMDI2fSwKICBzZXJpZXM9e0xlY3R1cmUgTm90ZXMgaW4gQ29tcHV0ZXIgU2NpZW5jZX0sCiAgdm9sdW1lPXsxNzA2OX0sCiAgcGFnZXM9ezY0My0tNjYwfSwKICBwdWJsaXNoZXI9e1NwcmluZ2VyfSwKICBhZGRyZXNzPXtDaGFtfSwKICB5ZWFyPXsyMDI2fSwKICBkb2k9ezEwLjEwMDcvOTc4LTMtMDMyLTM3MDIzLTVfMzV9LAogIHVybD17aHR0cHM6Ly9kb2kub3JnLzEwLjEwMDcvOTc4LTMtMDMyLTM3MDIzLTVfMzV9Cn0iIiIKcyxuPXJlLnN1Ym4ocicoPHByZT48Y29kZSBkYXRhLWJpYnRleD4pLio/KDwvY29kZT48L3ByZT4pJyxsYW1iZGEgbTptLmdyb3VwKDEpK2JpYittLmdyb3VwKDIpLHMsY291bnQ9MSxmbGFncz1yZS5TKQphc3NlcnQgbj09MQpwLndyaXRlX3RleHQocyxlbmNvZGluZz0idXRmLTgiKQo=' | base64 -d | python
+      - name: Commit
+        run: git config user.name github-actions && git config user.email actions@github.com && git add index.html && git diff --cached --quiet || (git commit -m 'Use official ECCV Springer paper link and citation' && git push)
